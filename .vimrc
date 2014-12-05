@@ -23,7 +23,7 @@ autocmd VimEnter * SessionOpenLast
 let sessionman_save_on_exit=1
 
 " Set cuda filetype for *.cuh files (cuda header)
-autocmd BufNewFile,BufRead *.cu set ft=cuda
+autocmd BufNewFile,BufRead *.cuh set ft=cuda
 
 " Tab key cycles through buffers
 nnoremap <Tab> :bn<CR>
