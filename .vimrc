@@ -3,6 +3,10 @@ let mapleader = ","
 
 " VUNDLE
 set nocompatible
+" Execute this after fresh checkout of .vimrc to setup plugins:
+" git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+" Then in vim ':PluginInstall'
+
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
