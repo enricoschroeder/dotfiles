@@ -1,5 +1,20 @@
-execute pathogen#infect()
+" Remap leader key
+let mapleader = ","
 
+" VUNDLE
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'gmarik/Vundle.vim'
+Plugin 'Lokaltog/vim-easymotion'
+Plugin 'scrooloose/nerdtree.git'
+Plugin 'xolox/vim-misc'
+Plugin 'xolox/vim-session'
+call vundle#end()
+filetype plugin indent on
+
+" Some default settings...
 set ruler nu incsearch hlsearch
 set tabstop=4
 set softtabstop=4
@@ -17,10 +32,8 @@ nmap ,n :NERDTreeToggle<CR>
 "Show menu with completions on tab press
 set wildchar=<Tab> wildmenu wildmode=full
 
-" Sessionman -- Doesn't seem to be working...
-set viminfo='100,<500,s10,h,!
-autocmd VimEnter * if argc() == 0 | SessionOpenLast
-let sessionman_save_on_exit=1
+" session plugin
+let g:session_autosave = 'yes' " Without this macvim crashes...
 
 " Set cuda filetype for *.cuh files (cuda header)
 autocmd BufNewFile,BufRead *.cuh set ft=cuda
@@ -28,3 +41,8 @@ autocmd BufNewFile,BufRead *.cuh set ft=cuda
 " Tab key cycles through buffers
 nnoremap <Tab> :bn<CR>
 nnoremap <S-Tab> :bp<CR>
+
+" Easymotion plugin
+map <Leader> <Plug>(easymotion-prefix)
+let g:EasyMotion_use_upper = 1
+let g:EasyMotion_keys = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ;'
