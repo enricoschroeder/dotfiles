@@ -19,7 +19,7 @@ set wildchar=<Tab> wildmenu wildmode=full
 
 " Sessionman -- Doesn't seem to be working...
 set viminfo='100,<500,s10,h,!
-autocmd VimEnter * SessionOpenLast
+autocmd VimEnter * if argc() == 0 | SessionOpenLast
 let sessionman_save_on_exit=1
 
 " Set cuda filetype for *.cuh files (cuda header)
