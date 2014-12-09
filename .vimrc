@@ -48,5 +48,4 @@ nnoremap <S-Tab> :bp<CR>
 
 " Easymotion plugin
 map <Leader> <Plug>(easymotion-prefix)
-let g:EasyMotion_use_upper = 1
-let g:EasyMotion_keys = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ;'
+
