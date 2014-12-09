@@ -1,12 +1,16 @@
-" Remap leader key
-let mapleader = ","
-
-" VUNDLE
-set nocompatible
 " Execute this after fresh checkout of .vimrc to setup plugins:
 " git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 " Then in vim ':PluginInstall'
 
+" Remap leader key
+let mapleader = "ö"
+
+" Set ä to open command mode and to function as enter
+nnoremap ä :
+cnoremap ä <cr>
+
+" VUNDLE
+set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -31,7 +35,7 @@ set smartindent
 set ignorecase smartcase
 
 "Toggle NerdTree with ,-n
-nmap ,n :NERDTreeToggle<CR>
+nnoremap <Leader>n :NERDTreeToggle<CR>
 
 "Show menu with completions on tab press
 set wildchar=<Tab> wildmenu wildmode=full
