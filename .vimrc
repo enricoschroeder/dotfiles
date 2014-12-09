@@ -53,3 +53,7 @@ nnoremap <S-Tab> :bp<CR>
 " Easymotion plugin
 map <Leader> <Plug>(easymotion-prefix)
 let g:EasyMotion_keys = 'asdghklqwertyuiopzxcvbnmfj,'
+
+" Command for closing current buffer while retaining window
+map <leader>d :bp<bar>sp<bar>bn<bar>bd<cr>
+
