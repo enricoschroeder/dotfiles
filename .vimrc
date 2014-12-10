@@ -57,3 +57,6 @@ let g:EasyMotion_keys = 'asdghklqwertyuiopzxcvbnmfj,'
 " Command for closing current buffer while retaining window
 map <leader>d :bp<bar>sp<bar>bn<bar>bd<cr>
 
+" Set session options (what to remember when saving/restoring session)
+set sessionoptions+=resize,winpos,winsize,blank,buffers,curdir,folds,help,options,tabpages
+
