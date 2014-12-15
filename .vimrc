@@ -9,6 +9,10 @@ let mapleader = "ö"
 nnoremap ä :
 cnoremap ä <cr>
 
+" Set ö to browse command history when in command mode
+cnoremap ö <up>
+cnoremap Ö <down>
+
 " VUNDLE
 set nocompatible
 filetype off
@@ -19,6 +23,7 @@ Plugin 'Lokaltog/vim-easymotion'
 Plugin 'scrooloose/nerdtree.git'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-session'
+Plugin 'kien/ctrlp.vim'
 call vundle#end()
 filetype plugin indent on
 
