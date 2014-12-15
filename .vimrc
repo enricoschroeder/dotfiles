@@ -65,3 +65,6 @@ map <leader>d :bp<bar>sp<bar>bn<bar>bd<cr>
 " Set session options (what to remember when saving/restoring session)
 set sessionoptions+=resize,winpos,winsize,blank,buffers,curdir,folds,help,options,tabpages
 
+" Buffer switch options
+set switchbuf=useopen,usetab,newtab
+
