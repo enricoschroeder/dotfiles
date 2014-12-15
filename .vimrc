@@ -2,6 +2,12 @@
 " git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 " Then in vim ':PluginInstall'
 
+" Set color scheme
+set t_Co=256
+set t_AB=^[[48;5;%dm
+set t_AF=^[[38;5;%dm
+colorscheme solarized 
+
 " Remap leader key
 let mapleader = "ö"
 
@@ -24,6 +30,8 @@ Plugin 'scrooloose/nerdtree.git'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-session'
 Plugin 'kien/ctrlp.vim'
+Plugin 'bling/vim-bufferline'
+Plugin 'bling/vim-airline'
 call vundle#end()
 filetype plugin indent on
 
@@ -68,3 +76,21 @@ set sessionoptions+=resize,winpos,winsize,blank,buffers,curdir,folds,help,option
 " Buffer switch options
 set switchbuf=useopen,usetab,newtab
 
+" Remap paragraph navigation
+nnoremap - }
+nnoremap _ {
+
+" Always display status line
+set laststatus=2
+
+" Airline plugin
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
+let g:airline_left_sep = '▶'
+let g:airline_right_sep = '◀'
+
+" Bufferline plugin
+let g:bufferline_rotate = 1
+let g:bufferline_echo = 0
+let g:bufferline_fixed_index = 1 
