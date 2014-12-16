@@ -7,7 +7,7 @@ set t_Co=256
 set t_AB=^[[48;5;%dm
 set t_AF=^[[38;5;%dm
 set background=dark
-colorscheme solarized 
+colorscheme solarized
 
 " Remap leader key
 let mapleader = "ö"
@@ -44,6 +44,7 @@ set shiftwidth=4
 set expandtab
 set hidden
 set smartindent
+set cursorline
 
 " Use case insensitive search, except when using capital letters
 set ignorecase smartcase
@@ -78,8 +79,8 @@ set sessionoptions+=resize,winpos,winsize,blank,buffers,curdir,folds,help,option
 set switchbuf=useopen,usetab,newtab
 
 " Remap paragraph navigation
-nnoremap - }
-nnoremap _ {
+" nnoremap - }
+" nnoremap _ {
 
 " Always display status line
 set laststatus=2
@@ -95,4 +96,4 @@ let g:airline#extensions#whitespace#enabled = 0
 " Bufferline plugin
 let g:bufferline_rotate = 1
 let g:bufferline_echo = 0
-let g:bufferline_fixed_index = 1 
+let g:bufferline_fixed_index = 1
