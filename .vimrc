@@ -31,8 +31,10 @@ Plugin 'scrooloose/nerdtree.git'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-session'
 Plugin 'kien/ctrlp.vim'
-Plugin 'bling/vim-bufferline'
-Plugin 'bling/vim-airline'
+"Plugin 'bling/vim-bufferline'
+"Plugin 'fholgado/minibufexpl.vim'
+"Plugin 'bling/vim-airline'
+Plugin 'itchyny/lightline.vim'
 call vundle#end()
 filetype plugin indent on
 
@@ -97,3 +99,8 @@ let g:airline#extensions#whitespace#enabled = 0
 let g:bufferline_rotate = 1
 let g:bufferline_echo = 0
 let g:bufferline_fixed_index = 1
+
+" Lightline plugin
+let g:lightline = {
+    \ 'colorscheme': 'solarized',
+    \ }
