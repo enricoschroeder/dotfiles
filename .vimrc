@@ -90,6 +90,7 @@ if !exists('g:airline_symbols')
 endif
 let g:airline_left_sep = '▶'
 let g:airline_right_sep = '◀'
+let g:airline#extensions#whitespace#enabled = 0
 
 " Bufferline plugin
 let g:bufferline_rotate = 1
