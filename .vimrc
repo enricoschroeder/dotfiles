@@ -72,6 +72,12 @@ nnoremap <S-Tab> :bp<CR>
 " Backspace disables current highlights
 nnoremap <backspace> :noh<CR>
 
+" Ctrl+k/j keep cursor centered
+nnoremap <C-k> kzz
+nnoremap <C-j> jzz
+nnoremap <C-d> <C-d>zz
+nnoremap <C-u> <C-u>zz
+
 " Easymotion plugin
 map <Leader> <Plug>(easymotion-prefix)
 let g:EasyMotion_keys = 'asdghklqwertyuiopzxcvbnmfj,'
