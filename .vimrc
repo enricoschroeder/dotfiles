@@ -30,8 +30,7 @@ Plugin 'Lokaltog/vim-easymotion'
 Plugin 'scrooloose/nerdtree.git'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-session'
-Plugin 'kien/ctrlp.vim'
-"Plugin 'bling/vim-bufferline'
+Plugin 'bling/vim-bufferline'
 "Plugin 'fholgado/minibufexpl.vim'
 "Plugin 'bling/vim-airline'
 Plugin 'itchyny/lightline.vim'
@@ -81,24 +80,16 @@ set sessionoptions+=resize,winpos,winsize,blank,buffers,curdir,folds,help,option
 set switchbuf=useopen,usetab,newtab
 
 " Remap paragraph navigation
-" nnoremap - }
-" nnoremap _ {
+nnoremap - }
+nnoremap _ {
 
 " Always display status line
 set laststatus=2
 
-" Airline plugin
-if !exists('g:airline_symbols')
-    let g:airline_symbols = {}
-endif
-let g:airline_left_sep = '▶'
-let g:airline_right_sep = '◀'
-let g:airline#extensions#whitespace#enabled = 0
-
 " Bufferline plugin
-let g:bufferline_rotate = 1
-let g:bufferline_echo = 0
-let g:bufferline_fixed_index = 1
+"let g:bufferline_rotate = 1
+"let g:bufferline_echo = 0
+"let g:bufferline_fixed_index = 1
 
 " Lightline plugin
 let g:lightline = {
