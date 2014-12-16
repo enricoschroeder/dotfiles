@@ -4,6 +4,7 @@
 
 " Set color scheme
 set t_Co=256
+let g:session_persist_colors=0 "vim-session option"
 if has("gui_running")
     set background=dark
     colorscheme solarized
@@ -39,7 +40,7 @@ call vundle#end()
 filetype plugin indent on
 
 " Some default settings...
-set ruler nu incsearch hlsearch
+set ruler nu 
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
@@ -47,7 +48,8 @@ set expandtab
 set hidden
 set smartindent
 set cursorline
-
+set incsearch hlsearch
+        
 " Use case insensitive search, except when using capital letters
 set ignorecase smartcase
 
@@ -67,6 +69,9 @@ autocmd BufNewFile,BufRead *.cuh set ft=cuda
 nnoremap <Tab> :bn<CR>
 nnoremap <S-Tab> :bp<CR>
 
+" Backspace disables current highlights
+nnoremap <backspace> :noh<CR>
+
 " Easymotion plugin
 map <Leader> <Plug>(easymotion-prefix)
 let g:EasyMotion_keys = 'asdghklqwertyuiopzxcvbnmfj,'
@@ -75,7 +80,7 @@ let g:EasyMotion_keys = 'asdghklqwertyuiopzxcvbnmfj,'
 map <leader>d :bp<bar>sp<bar>bn<bar>bd<cr>
 
 " Set session options (what to remember when saving/restoring session)
-set sessionoptions+=resize,winpos,winsize,blank,buffers,curdir,folds,help,options,tabpages
+set sessionoptions=resize,winpos,winsize,blank,buffers,curdir,folds,help,tabpages
 
 " Buffer switch options
 set switchbuf=useopen,usetab,newtab
@@ -96,3 +101,4 @@ set laststatus=2
 let g:lightline = {
     \ 'colorscheme': 'solarized',
     \ }
+
