@@ -4,10 +4,11 @@
 
 " Set color scheme
 set t_Co=256
-set t_AB=^[[48;5;%dm
-set t_AF=^[[38;5;%dm
-set background=dark
-colorscheme solarized
+if has("gui_running")
+    set background=dark
+    colorscheme solarized
+else
+endif
 
 " Remap leader key
 let mapleader = "ö"
