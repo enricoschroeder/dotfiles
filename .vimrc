@@ -72,11 +72,15 @@ nnoremap <S-Tab> :bp<CR>
 " Backspace disables current highlights
 nnoremap <backspace> :noh<CR>
 
-" Ctrl+k/j keep cursor centered
+" Remap paragraph navigation
+nnoremap - }
+nnoremap _ {
+
+" Ctrl+some motions keep cursor centered
 nnoremap <C-k> kzz
 nnoremap <C-j> jzz
-nnoremap <C-d> <C-d>zz
-nnoremap <C-u> <C-u>zz
+nnoremap <C-h> <C-d>zz
+nnoremap <C-l> <C-u>z
 
 " Easymotion plugin
 map <Leader> <Plug>(easymotion-prefix)
@@ -91,10 +95,6 @@ set sessionoptions=resize,winpos,winsize,blank,buffers,curdir,folds,help,tabpage
 " Buffer switch options
 set switchbuf=useopen,usetab,newtab
 
-" Remap paragraph navigation
-nnoremap - }
-nnoremap _ {
-
 " Always display status line
 set laststatus=2
 
@@ -107,4 +107,11 @@ set laststatus=2
 let g:lightline = {
     \ 'colorscheme': 'solarized',
     \ }
+
+" ===================================================================================
+" ADVANCED STUFF
+" ===================================================================================
+
+" Open small split window showing beginning of function
+nnoremap <leader>k :10sp <cr> :execute "normal [[" <cr>
 
