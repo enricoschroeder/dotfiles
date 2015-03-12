@@ -36,6 +36,8 @@ Plugin 'bling/vim-bufferline'
 "Plugin 'fholgado/minibufexpl.vim'
 "Plugin 'bling/vim-airline'
 Plugin 'itchyny/lightline.vim'
+Plugin 'vim-pandoc/vim-pandoc'
+Plugin 'vim-pandoc/vim-pandoc-syntax'
 call vundle#end()
 filetype plugin indent on
 
@@ -80,7 +82,7 @@ nnoremap _ {
 nnoremap <C-k> kzz
 nnoremap <C-j> jzz
 nnoremap <C-h> <C-d>zz
-nnoremap <C-l> <C-u>z
+nnoremap <C-l> <C-u>zz
 
 " Easymotion plugin
 map <Leader> <Plug>(easymotion-prefix)
@@ -107,6 +109,10 @@ set laststatus=2
 let g:lightline = {
     \ 'colorscheme': 'solarized',
     \ }
+
+" Pandoc plugin
+let g:pandoc#modules#disabled = ["folding"]
+let g:pandoc#spell#default_langs = ["en_us", "de"]
 
 " ===================================================================================
 " ADVANCED STUFF
